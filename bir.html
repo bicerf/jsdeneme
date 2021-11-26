@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js"></script>
+
+</head>
+<body>
+    <p id="test">Selam</p>
+    <p id="test2" style="font-size: 15px;">Lorem ipsum dolor sit amet.</p>
+    <p id="script"></p>
+    <p id="test3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore quos, asperiores optio autem necessitatibus iste sit quam, aliquid neque perferendis amet, rem accusamus eaque officiis odit laudantium tenetur voluptates sed?</p>
+    <p id="test4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa ullam fuga quaerat, excepturi cum sequi obcaecati. Laudantium asperiores consectetur soluta, laboriosam reprehenderit numquam sint atque nesciunt a? Modi, ad voluptas!</p>
+    <script> /* sayfa ile birlikte yüklenir bu şekilde onclicksiz*/
+        document.getElementById('script').innerHTML="Deneme yazısıdır!";
+
+        function func(){
+            document.getElementById('test3').innerHTML="Paragraf değiştirildi";
+        }
+
+
+    </script>
+    <button onclick="func()">Değiştir Test3</button>
+    <button onclick="func1()">Değiştir Test4</button>
+    <label style="border:1px solid #000;color:rgb(150, 68, 44) ;background:blanchedalmond" type="button" onclick="document.getElementById('test2').style.display='none'">Gizle</label>
+    <label type="button" onclick="document.getElementById('test2').style.display='block'">Göster</label>
+    <button onclick="document.getElementById('test2').style.fontSize='35px'">Font Size Değiştir</button>
+    <button onclick="document.getElementById('test').innerHTML='Selam JS'">selamlama</button>
+
+    <button onclick="document.getElementById('test1').src='images/pic_bulbon.gif'">Aç</button>
+
+    <img src="images/pic_bulboff.gif" id="test1" alt="">
+
+    <button onclick="document.getElementById('test1').src='images/pic_bulboff.gif'">Kapat</button>
+</body>
+
+<!-- <script src="script.js"></script> -->
+
+</html>

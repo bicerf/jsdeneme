@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="test1"></p>
+    <p id="test2"></p>
+    <p id="test3"></p>
+    <p id="test4"></p>
+    <p id="test5">Naber nasılsın</p>
+    <p id="test6">Bu bir deneme yazısıdır . deneme</p>
+    <p id="test7">Küçük</p>
+    <p id="test8"></p>
+    <p id="test9"></p>
+    <p id="test10"></p>
+    <p id="test11"></p>
+    <p id="test12"></p>
+    <p id="test13"></p>
+    <p id="test14"></p>
+    <button onclick="func()">REPLACE</button>
+    <button onclick="func1()">REPLACE1</button>
+    <button onclick="func2()">Büyütme</button>
+    <button onclick="func3()">Küçültme</button>
+    <script>
+
+        let str1="Hello";
+        let str2="World";
+        let str3=str1.concat(" ",str2);
+        let sayi="5";
+        document.getElementById("test8").innerHTML=str3;
+        document.getElementById("test9").innerHTML=sayi.padStart(4,0);//0005
+        document.getElementById("test10").innerHTML=sayi.padEnd(4,0); //5000
+        document.getElementById("test11").innerHTML=str1.charAt(0); //H
+        document.getElementById("test12").innerHTML=str1.charCodeAt(0); //0.indexteki karakterin ASCII kodunu verir
+        document.getElementById("test13").innerHTML=str1[0]; //H
+        
+
+
+
+        let txt="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        let str="Araba, Otobüs, Kamyon";
+        document.getElementById('test1').innerHTML=txt.length;
+        document.getElementById('test4').innerHTML=str.substr(7,6);//7.karakerden sonra 6 karakter al Otobüs
+        document.getElementById('test2').innerHTML=str.slice(7,13); //Otobüs
+        document.getElementById('test3').innerHTML=str.slice(-14,-8); //Otobüs(- ile olunca tersten sayıyor indexi)
+
+        function func(){
+            let text=document.getElementById('test5').innerHTML;
+            document.getElementById('test5').innerHTML=text.replace(/nasılsın/i,'deneme'); ///nasılsın/i in case sensitive yapar harfler uysa kafi
+        }
+        function func1(){
+            let text=document.getElementById('test6').innerHTML;
+            document.getElementById('test6').innerHTML=text.replace(/deneme/g,"uydurma"); ///g de global anlamına geliyor aynı anda tüm denemeleri değiştiriyor.
+        }
+        function func2(){
+            let text = document.getElementById("test7").innerHTML;
+            document.getElementById('test7').innerHTML=text.toUpperCase()
+        }
+        function func3(){
+            let text = document.getElementById("test7").innerHTML;
+            document.getElementById('test7').innerHTML=text.toLowerCase();
+        }
+
+    </script>
+
+</body>
+</html>

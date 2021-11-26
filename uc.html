@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="test1"></p>
+    <p id="test2"></p>
+    <p id="test3"></p>
+    <p id="test4"></p>
+    <label for="" style="background-color: red;color: white;">Kırmızı</label>
+    <button onclick="document.getElementById('test1').innerHTML=z">Z değeri
+</button>
+    <button onclick="document.getElementById('test1').innerHTML=(x==y)+'<br>'+(x===z)">Karşılaştırma</button>
+    <button onclick="document.getElementById('test1').innerHTML=xxx">Sonuçlar1</button>
+    <button onclick="document.getElementById('test1').innerHTML=a">Sonuçlar2</button>
+    <button onclick="document.getElementById('test1').innerHTML=aa">Sonuçlar3</button>
+    <!-- 3 eşitlikte hem tip hem değer kontrol edilir 2 eşitlikte ise değere bakılır -->
+    <script>
+        let x,y,z;
+        x=5;
+        y="5";
+        z=x+y;
+
+        let length=16; //number tipi
+        let lastName="Biçer"; //string tipi
+        let xx= {firstName:"Furkan",lastName:"Biçer",age:23}; //object 
+
+        let xxx=16+"deneme";//16deneme
+        let a =16+4+"deneme";//20deneme
+        let aa="deneme"+16+4;//deneme164
+        //ilk tipe göre işlem yapıyor stringse string devam ediyor int se int devam ediyor
+        //hem int ı hem stringi ayrı yapacaksak matematiksel işlemleri paranteze alıp yapıyoruz
+
+        const arabalar=["Opel","Toyota","Audi"];
+        document.getElementById("test2").innerHTML=arabalar[2];
+        const person={
+            firstName:"Furkan",
+            lastName:"Biçer",
+            age:23,
+            eyeColor:'<label for="" style="background-color: red;color: white;">Kırmızı</label>'
+,
+        };
+        document.getElementById("test3").innerHTML=person.firstName+' is '+ person.age+ ' years old and eye colors are ' + person.eyeColor;
+    </script>
+</body>
+</html>
